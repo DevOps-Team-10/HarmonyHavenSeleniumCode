@@ -23,7 +23,7 @@ public class ThirdTest {
 
         // Locate the element with class attributes matching "text-2xl", "font-bold", and "mb-4"
         String loginHeaderText = driver.findElement(By.cssSelector("h2.text-2xl.font-bold.mb-4")).getText();
-        Assert.assertTrue("Login text not found", loginHeaderText.contains("123"));
+        Assert.assertTrue("Login text not found", loginHeaderText.contains("Login"));
 
         driver.quit();
     }
