@@ -19,7 +19,7 @@ public class FirstTest {
         driver = new ChromeDriver(options);
         driver.get("http://34.206.63.71:3000/");
         System.out.println("Title of the page is: " + driver.getTitle());
-        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Harmony Haven"));
+        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Harmony Haven1"));
     }
 
 
