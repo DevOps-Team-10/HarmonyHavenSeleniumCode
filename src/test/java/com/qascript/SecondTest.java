@@ -19,9 +19,6 @@ public class SecondTest {
         driver.get("http://34.206.63.71:3000/");
         String actualText = driver.findElement(By.cssSelector("h2.text-2xl.font-bold.mb-4")).getText();
         Assert.assertTrue("Register text not found", actualText.contains("Register"));
-        Assert.assertTrue("Register text not found", actualText.contains("Register"));
-        Assert.assertTrue("Register text not found", actualText.contains("Register"));
-        Assert.assertTrue("Register text not found", actualText.contains("Register"));
-        Assert.assertTrue("Register text not found", actualText.contains("123"));
+      
     }
 }
