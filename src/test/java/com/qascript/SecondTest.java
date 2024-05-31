@@ -2,12 +2,13 @@ package com.qascript;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class SecondTest {
-        @Test
+    @Test
     public void OpenBrowser()  {
         WebDriver driver;
         System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
@@ -17,6 +18,13 @@ public class SecondTest {
         driver = new ChromeDriver(options);
         driver.get("http://34.206.63.71:3000/");
         System.out.println("Title of the page is: " + driver.getTitle());
-        Assert.assertTrue("Page title is not correct",driver.getTitle().equals("Harmony Haven"));
+        Assert.assertTrue("Page title is not correct", driver.getTitle().equals("Harmony Haven"));
+
+        // Locate the element with class "text-2xl" and verify its text
+String actualText = driver.findElement(By.cssSelector("h2.text-2xl.font-bold.mb-4")).getText();
+
+        Assert.assertTrue("Register text not found", actualText.contains("Register"));
+
+        driver.quit(); // Don't forget to quit the WebDriver
     }
 }
