@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.qascript.FirstTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.07 s <<< FAILURE! - in com.qascript.FirstTest
+com.qascript.FirstTest.OpenBrowser  Time elapsed: 0.044 s  <<< ERROR!
+java.lang.IllegalStateException: The driver executable does not exist: /usr/bin/chromedriver
+	at com.qascript.FirstTest.OpenBrowser(FirstTest.java:19)
+
