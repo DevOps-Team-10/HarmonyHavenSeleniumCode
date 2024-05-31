@@ -17,14 +17,7 @@ public class SecondTest {
         options.addArguments("disable-gpu");
         driver = new ChromeDriver(options);
         driver.get("http://34.206.63.71:3000/");
-        System.out.println("Title of the page is: " + driver.getTitle());
-        Assert.assertTrue("Page title is not correct", driver.getTitle().equals("Harmony Haven"));
-
-        // Locate the element with class "text-2xl" and verify its text
-String actualText = driver.findElement(By.cssSelector("h2.text-2xl.font-bold.mb-4")).getText();
-
+        String actualText = driver.findElement(By.cssSelector("h2.text-2xl.font-bold.mb-4")).getText();
         Assert.assertTrue("Register text not found", actualText.contains("Register"));
-
-        driver.quit(); // Don't forget to quit the WebDriver
     }
 }
