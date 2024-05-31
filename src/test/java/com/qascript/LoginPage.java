@@ -42,7 +42,7 @@ public class LoginPage {
 
         // Locate the element with class attributes matching "text-2xl", "font-bold", and "mb-4"
         String loginHeaderText = driver.findElement(By.cssSelector("h2.text-2xl.font-bold.mb-4")).getText();
-        Assert.assertTrue("Login text not found", loginHeaderText.contains("Login"));
+        Assert.assertTrue("Login text not found", loginHeaderText.contains("Login123"));
 
         driver.quit(); // Don't forget to quit the WebDriver
     }
